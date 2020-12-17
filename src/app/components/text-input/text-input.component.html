@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill" [class.has-input-value]="!!value" [class.mat-form-field-invalid]="isInvalid">
+  <mat-label>{{label}}</mat-label>
+  <input
+    matInput
+    type="text"
+    [disabled]="disabled"
+    [(ngModel)]="value"
+    (ngModelChange)="valueChange.emit(value)"
+  >
+  <mat-icon *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="onValueClear($event)">close</mat-icon>
+  <mat-hint>{{errorMessage}}</mat-hint>
+</mat-form-field>
+
+<!-- class="mat-form-field-invalid" -->

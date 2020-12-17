@@ -1,0 +1,79 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-container {
+    width: 430px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 48px;
+      text-align: center;
+      color: #263238;
+      margin-bottom: 50px;
+    }
+
+    .text-inputs-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      app-text-input {
+        width: 45%;
+      }
+    }
+
+    .app-text-input {
+      &::ng-deep {
+        .mat-form-field {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .radio-buttons-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 28px;
+
+      > div {
+        width: 45%;
+
+        > p {
+          margin: 0 0 12px 0;
+          font-size: 12px;
+          line-height: 14px;
+          color: #3A4BA6;
+        }
+
+        .mat-radio-group {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      .mat-raised-button {
+        background: #3A4BA6;
+        border-radius: 20px;
+        line-height: normal;
+        padding: 10px 46px;
+
+        .mat-button-wrapper {
+          color: #FFFFFF;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
